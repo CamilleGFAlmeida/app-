@@ -11,6 +11,7 @@ export default function CadastroPassword() {
       </View>
       <Text style={styles.title}>Cadastro</Text>
 
+      <TextInput placeholder="Digite seu e-mail" style={styles.input} />
       <TextInput placeholder="Digite sua senha" style={styles.input} />
       <TextInput placeholder="Confirme sua senha" style={styles.input} />
       <View style={styles.row}>

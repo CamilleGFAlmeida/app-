@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function Cadastro() {
   return (
     <View style={styles.container}>
-      <Ionicons name="arrow-back" size={24} color="teal" style={styles.backIcon} />
+      <Ionicons name="arrow-back" size={20} color="teal" style={styles.backIcon} />
       <View style={styles.logoContainer}>
         <Image source={require('./assets/img/logo-login.png')} style={styles.logo} />
       </View>

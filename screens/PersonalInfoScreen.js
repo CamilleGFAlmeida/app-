@@ -114,10 +114,11 @@ const styles = StyleSheet.create({
   editIcon: {
     position: 'absolute',
     bottom: 0,
-    right: 10,
+    marginLeft: 50, 
     backgroundColor: '#008080',
     borderRadius: 15,
     padding: 5,
+    /*right: 10, */
   },
   inputContainer: {
     marginBottom: 20,

@@ -1,15 +1,16 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Cadastro() {
   return (
-    <View style={styles.container}>
-      <Ionicons name="arrow-back" size={20} color="teal" style={styles.backIcon} />
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <Ionicons name="arrow-back" size={24} color="teal" style={styles.backIcon} />
       <View style={styles.logoContainer}>
         <Image source={require('./assets/img/logo-login.png')} style={styles.logo} />
       </View>
-      <Text style={styles.title}>Cadastro</Text>
+      <Text style={styles.title}>Criar Conta</Text>
+      <Text style={styles.subtitle}>Comece a fazer suas compras!</Text>
 
       <TextInput placeholder="Nome" style={styles.input} />
       <TextInput placeholder="Sobrenome" style={styles.input} />
@@ -30,16 +31,16 @@ export default function Cadastro() {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Avançar</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  scrollContainer: {
+    flexGrow: 1,
     backgroundColor: '#eaf1f1',
     paddingHorizontal: 20,
-    paddingTop: 40,
+    paddingTop: 50,
   },
   backIcon: {
     alignSelf: 'flex-start',
@@ -49,16 +50,21 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   logo: {
-    width: 120, // Ajuste conforme o tamanho desejado
-    height: 120, // Ajuste conforme o tamanho desejado
+    width: 120,
+    height: 120,
     resizeMode: 'contain',
   },
   title: {
     fontSize: 20,
     fontWeight: '500',
-    textAlign: 'center',
-    marginBottom: 20,
-    color: '#333', 
+    textAlign: 'left',
+    marginBottom: 5,
+    color: '#007676', 
+  },
+  subtitle: {
+    fontSize: 11, 
+    fontWeight: '400', 
+    marginBottom: 20, 
   },
   input: {
     borderWidth: 1,
@@ -66,6 +72,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
+    fontSize: 11, 
   },
   row: {
     flexDirection: 'row',
@@ -80,6 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: 'center',
     marginTop: 20,
+    marginBottom: 40, // Para dar espaço extra no final do scroll
   },
   buttonText: {
     color: '#fff',

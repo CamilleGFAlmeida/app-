@@ -11,7 +11,9 @@ export default function CadastroScreen() {
       <View style={styles.logoContainer}>
         <Image source={require('./assets/img/logo-login.png')} style={styles.logoImage} />
       </View>
-      <Text style={styles.title}>Cadastro</Text>
+      <Text style={styles.title}>Entrar</Text>
+      <Text style={styles.subtitle}>Entre com sua conta para continuar suas compras!</Text>
+      
 
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Email</Text>
@@ -39,37 +41,44 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'left',
     backgroundColor: '#E7F0F3',
     paddingHorizontal: 20,
   },
   backButton: {
     position: 'absolute',
-    top: 20,
+    top: 55,
     left: 20,
   },
   logoContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
+    marginTop: 40, 
   },
   logoImage: {
-    width: 160,
-    height: 160,
+    width: 120,
+    height: 120,
     resizeMode: 'contain',
   },
   title: {
     fontSize: 20,
     fontWeight: '500',
-    color: '#333',
-    marginBottom: 20,
+    color: '#007676',
+    textAlign: 'left', 
+    marginBottom: 5,
+  },
+  subtitle: {
+    fontSize: 11, 
+    textAlign: 'left',
+    marginBottom: 24,  
   },
   inputContainer: {
     width: '100%',
     marginBottom: 15,
   },
   label: {
-    fontSize: 16,
+    fontSize: 11,
     color: '#000',
     marginBottom: 5,
   },
@@ -79,6 +88,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
+    fontSize: 11,
   },
   button: {
     width: '100%',
@@ -91,7 +101,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '500',
   },
 });

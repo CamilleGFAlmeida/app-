@@ -9,15 +9,15 @@ export default function CadastroPassword() {
       <View style={styles.logoContainer}>
         <Image source={require('./assets/img/logo-login.png')} style={styles.logo} />
       </View>
-      <Text style={styles.title}>Cadastro</Text>
+      <Text style={styles.title}>Confirme seus dados</Text>
+      <Text style={styles.subtitle}>Digite seus dados para avançar.</Text>
 
-      <TextInput placeholder="Digite seu e-mail" style={styles.input} />
+      <Text style={styles.label}>Digite sua senha</Text>
       <TextInput placeholder="Digite sua senha" style={styles.input} />
+
+      <Text style={styles.label}>Confirme sua senha</Text>
       <TextInput placeholder="Confirme sua senha" style={styles.input} />
-      <View style={styles.row}>
-        
-      </View>
-      
+
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Avançar</Text>
       </TouchableOpacity>
@@ -30,26 +30,37 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#eaf1f1',
     paddingHorizontal: 20,
-    paddingTop: 40,
+    paddingTop: 50,
   },
   backIcon: {
     alignSelf: 'flex-start',
   },
   logoContainer: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
     marginBottom: 20,
   },
   logo: {
-    width: 120, // Ajuste conforme o tamanho desejado
-    height: 120, // Ajuste conforme o tamanho desejado
+    width: 120,
+    height: 120,
     resizeMode: 'contain',
+    marginTop: 50, 
   },
   title: {
     fontSize: 20,
     fontWeight: '500',
-    textAlign: 'center',
-    marginBottom: 20,
-    color: '#333', 
+    textAlign: 'left',
+    marginBottom: 5,
+    color: '#007676', 
+  },
+  subtitle: {
+    fontSize: 11,
+    marginBottom: 20, 
+  }, 
+  label: {
+    fontSize: 12,
+    color: '#333',
+    marginBottom: 5,
+    marginTop: 10,
   },
   input: {
     borderWidth: 1,
@@ -57,20 +68,14 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  halfInput: {
-    width: '48%',
+    fontSize: 11, 
   },
   button: {
     backgroundColor: 'teal',
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',
-    marginTop: 20, // 20
+    marginTop: 20,
   },
   buttonText: {
     color: '#fff',

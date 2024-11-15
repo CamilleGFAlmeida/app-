@@ -22,7 +22,7 @@ export default function OnEatLoginScreen() {
       </View>
 
       <Text style={styles.welcomeText}>
-        Seja Bem-Vindo ao <Text style={styles.appBold}>OnEat</Text>
+        Bem-Vindo ao <Text style={styles.appBold}>OnEat</Text>
       </Text>
       <Text style={styles.subText}>O que deseja fazer hoje?</Text>
 
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   imagePlaceholder: {
     width: '100%',
-    height: Dimensions.get('window').height * 0.35, // Ocupa 35% da altura da tela
+    height: Dimensions.get('window').height * 0.50, // Ocupa 50% da altura da tela
     overflow: 'hidden',
   },
   topImage: {
@@ -67,18 +67,22 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   logoContainer: {
-    alignItems: 'center',
-    marginVertical: 20,
+    position: 'absolute',  // Adiciona a sobreposição
+    top: '20%', // Ajusta a distância da parte superior da tela
+    left: '47%',
+    transform: [{ translateX: -42.5 }], // Centraliza a logo horizontalmente
+    zIndex: 1, // Certifica-se de que a logo fica sobre o fundo
   },
   logoImage: {
-    width: 85, // Ajuste o tamanho da logo conforme necessário
-    height: 85,
+    width: 120, // Aumenta o tamanho da logo
+    height: 120,
     resizeMode: 'contain',
   },
   welcomeText: {
     fontSize: 18,
     textAlign: 'center',
     marginBottom: 5,
+    marginTop: 50, 
   },
   appBold: {
     fontWeight: 'bold',

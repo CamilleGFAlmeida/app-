@@ -40,13 +40,13 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: '#eaf1f1',
     paddingHorizontal: 20,
-    paddingTop: 50,
+    paddingTop: 55,
   },
   backIcon: {
     alignSelf: 'flex-start',
   },
   logoContainer: {
-    alignItems: 'center',
+    alignItems: 'flex-start', // Alinha o logo à esquerda
     marginBottom: 20,
   },
   logo: {
